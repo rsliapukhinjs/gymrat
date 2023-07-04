@@ -1,5 +1,7 @@
+import Starter from "./components/Starter";
+
 const App = () => {
-  return <h1 className="text-red-500">GymRat</h1>;
+  return <Starter />;
 };
 
 export default App;
