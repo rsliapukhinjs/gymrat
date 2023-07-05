@@ -8,7 +8,7 @@ const Hero = () => {
           Build yourself today
         </h2>
         <p className="text-lg tracking-wider">Choose program. Show them all</p>
-        <Button text="Start Now" />
+        <Button text="Start Now" link="/program" />
       </div>
     </main>
   );
