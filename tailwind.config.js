@@ -3,9 +3,9 @@ export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      sans: ["Roboto Condensed", "sans-serif"],
+      sans: ["Agdasima", "sans-serif"],
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
