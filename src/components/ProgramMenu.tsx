@@ -1,20 +1,16 @@
 import { useForm } from "react-hook-form";
-
-type FormData = {
-  categories: "string";
-  difficulties: "string";
-  muscles: "string";
-};
+import { useContext } from "react";
+import { Exercise } from "../types/types";
 
 const ProgramMenu = () => {
-  const { register, handleSubmit } = useForm<FormData>();
-  const onSubmitForm = (formData: FormData) => {
+  const { register, handleSubmit } = useForm<Exercise>();
+  const onSubmitForm = (formData: Exercise) => {
     console.log("Submitted", formData);
   };
 
   const fieldStyle = "flex flex-col mb-2";
   return (
-    <aside className="flex flex-col items-center justify-start gap-8  p-16 bg-teal-100 bg-opacity-50">
+    <aside className="flex flex-col items-center justify-start gap-8 p-16 bg-teal-100 bg-opacity-50">
       <h2>Choose your options</h2>
       <form
         className="w-full flex flex-col gap-4 text-slate-900"
