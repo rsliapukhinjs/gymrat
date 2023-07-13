@@ -25,9 +25,9 @@ const ProgramMenu = () => {
 
   return (
     <aside className="flex flex-col items-center justify-start gap-8 p-16 bg-teal-100 bg-opacity-50">
-      <h2>Choose your options</h2>
+      <h2 className="text-2xl">Choose your options</h2>
       <form
-        className="w-full flex flex-col gap-4 text-slate-900"
+        className="w-full lg:w-1/2 flex flex-col gap-4 text-slate-900"
         onSubmit={handleSubmit(onSubmitForm)}
       >
         <div className={fieldStyle}>

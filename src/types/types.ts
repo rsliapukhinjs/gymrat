@@ -21,7 +21,7 @@ export type FetchedExercise = {
   target: {
     Primary: string[];
   };
-  videoURL?: string[];
+  videoURL?: string[] | undefined;
   youtubeURL?: string;
 };
 
