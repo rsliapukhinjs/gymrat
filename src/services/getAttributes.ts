@@ -1,8 +1,5 @@
-import { Exercise } from "../types/types";
-
-const getExercises = async (exercise: Exercise) => {
-  const url = `https://musclewiki.p.rapidapi.com/exercises?muscle=${exercise.muscles}&category=${exercise.categories}&difficulty=${exercise.difficulties}`;
-
+const getAttributes = async () => {
+  const url = "https://musclewiki.p.rapidapi.com/exercises/attributes";
   const options = {
     method: "GET",
     headers: {
@@ -20,4 +17,4 @@ const getExercises = async (exercise: Exercise) => {
   }
 };
 
-export default getExercises;
+export default getAttributes;

@@ -2,10 +2,10 @@ import Button from "../utils/Button";
 
 const Hero = () => {
   return (
-    <main className="flex-1 flex flex-col items-start justify-center gap-4 p-32 lg:px-96">
+    <main className="flex-1 flex flex-col items-start justify-center gap-4 p-32 px-48 xl:px-80">
       <div className="flex flex-col gap-2">
-        <h2 className="text-6xl xl:text-9xl uppercase font-bold">Build</h2>
-        <h2 className="text-6xl xl:text-9xl uppercase font-bold">yourself</h2>
+        <h2 className="text-7xl xl:text-9xl uppercase font-bold">Build</h2>
+        <h2 className="text-7xl xl:text-9xl uppercase font-bold">yourself</h2>
       </div>
       <p className="text-lg xl:text-2xl tracking-wider">
         Choose program. Show them all
