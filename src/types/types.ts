@@ -3,3 +3,13 @@ export type Exercise = {
   difficulties: string;
   muscles: string;
 };
+
+export type Action = {
+  type: string;
+  exercise: Exercise;
+};
+
+export type Context = {
+  exercise: Exercise;
+  dispatch: (action: Action) => void;
+};

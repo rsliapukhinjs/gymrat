@@ -1,12 +1,18 @@
-import { useForm } from "react-hook-form";
 import { useContext } from "react";
+import { ProgramContext } from "./Program";
+import { useForm } from "react-hook-form";
 import { Exercise } from "../types/types";
 
 const ProgramMenu = () => {
+  const { exercise, dispatch } = useContext(ProgramContext);
+
   const { register, handleSubmit } = useForm<Exercise>();
   const onSubmitForm = (formData: Exercise) => {
     console.log("Submitted", formData);
+    dispatch({ type: "set", exercise: formData });
   };
+
+  console.log(exercise);
 
   const fieldStyle = "flex flex-col mb-2";
   return (
