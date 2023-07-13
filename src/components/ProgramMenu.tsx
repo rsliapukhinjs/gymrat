@@ -4,30 +4,29 @@ import { useForm } from "react-hook-form";
 import { Exercise } from "../types/types";
 
 const ProgramMenu = () => {
-  const { dispatch, attributesData, isAttributesFetched, refetchQuery } =
+  const { dispatch, attributesData, isAttributesFetched } =
     useContext(ProgramContext);
 
   const { register, handleSubmit } = useForm<Exercise>();
   const onSubmitForm = (formData: Exercise) => {
     dispatch({ type: "set", exercise: formData });
-    refetchQuery();
   };
 
   const fieldStyle = "flex flex-col mb-2";
 
   if (!isAttributesFetched) {
     return (
-      <aside className="flex flex-col items-center justify-start gap-8 p-16 bg-teal-100 bg-opacity-50">
+      <aside className="flex flex-col items-center justify-start gap-8 p-16 bg-teal-100">
         <h2>Please wait...</h2>
       </aside>
     );
   }
 
   return (
-    <aside className="flex flex-col items-center justify-start gap-8 p-16 bg-teal-100 bg-opacity-50">
+    <aside className="flex flex-col items-center justify-start gap-8 p-16 bg-slate-500">
       <h2 className="text-2xl">Choose your options</h2>
       <form
-        className="w-full lg:w-1/2 flex flex-col gap-4 text-slate-900"
+        className="w-full lg:w-1/2 flex flex-col gap-4 text-slate-100"
         onSubmit={handleSubmit(onSubmitForm)}
       >
         <div className={fieldStyle}>

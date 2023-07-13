@@ -37,7 +37,6 @@ export type Context = {
   isAttributesFetched: boolean;
   exercisesData: Array<FetchedExercise>;
   isExercisesFetched: boolean;
-  refetchQuery: () => void;
 };
 
 export const initialExercise = {

@@ -11,29 +11,30 @@ import getAttributes from "../services/getAttributes";
 
 // CONTEXT
 export const ProgramContext = createContext<Context>({
-  exercise: initialExercise,
+  exercise: {
+    categories: "",
+    difficulties: "",
+    muscles: "",
+  },
   dispatch: () => {
     return;
   },
   attributesData: {
-    categories: [initialExercise.categories],
-    difficulties: [initialExercise.difficulties],
-    muscles: [initialExercise.muscles],
+    categories: [""],
+    difficulties: [""],
+    muscles: [""],
   },
   isAttributesFetched: false,
   exercisesData: [
     {
-      Category: initialExercise.categories,
-      Difficulty: initialExercise.difficulties,
+      Category: "",
+      Difficulty: "",
       target: {
-        Primary: [initialExercise.muscles],
+        Primary: [""],
       },
     },
   ],
   isExercisesFetched: false,
-  refetchQuery: () => {
-    return;
-  },
 });
 
 const Program = () => {
@@ -53,11 +54,11 @@ const Program = () => {
     ["attributes"],
     getAttributes
   );
-  const {
-    isFetched: isExercisesFetched,
-    data: exercisesData,
-    refetch: refetchQuery,
-  } = useQuery(["exercises", exercise], () => getExercises(exercise));
+  const { isFetched: isExercisesFetched, data: exercisesData } = useQuery(
+    ["exercises", exercise],
+    () => getExercises(exercise),
+    { staleTime: 0 }
+  );
 
   return (
     <ProgramContext.Provider
@@ -68,7 +69,6 @@ const Program = () => {
         isAttributesFetched,
         exercisesData,
         isExercisesFetched,
-        refetchQuery,
       }}
     >
       <div className="flex-1 bg-slate-900 bg-opacity-50 flex flex-col">

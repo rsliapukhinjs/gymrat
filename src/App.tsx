@@ -9,7 +9,7 @@ const queryClient = new QueryClient();
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex flex-col min-h-screen bg-[url('./assets/hero.jpg')] bg-cover bg-no-repeat bg-center text-slate-50">
+      <div className="flex flex-col min-h-screen text-slate-50">
         <Header />
         <Outlet />
         <Footer />

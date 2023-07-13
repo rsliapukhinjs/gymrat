@@ -7,16 +7,16 @@ const ProgramResults = () => {
 
   if (!isExercisesFetched) {
     return (
-      <aside className="flex flex-col items-center justify-start gap-8 p-16 bg-teal-100 bg-opacity-50">
+      <section className="flex flex-col items-center justify-start gap-8 p-16 bg-teal-100">
         <h2>Please wait...</h2>
-      </aside>
+      </section>
     );
   }
 
   console.log(exercisesData);
 
   return (
-    <section className="p-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <section className="p-8 grid grid-cols-1 lg:grid-cols-2 gap-8 bg-teal-500">
       {exercisesData.map((e) => (
         <ExerciseInfo fetchedExercise={e} key={e.id} />
       ))}
