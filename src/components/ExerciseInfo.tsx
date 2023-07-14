@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FetchedProp } from "../types/types";
 import Card from "../utils/Card";
 
@@ -15,8 +16,12 @@ const ExerciseInfo = ({ fetchedExercise }: FetchedProp) => {
         {fetchedExercise.target.Primary}
       </p>
 
+      <button className="inline-block px-4 py-2 bg-teal-500 hover:bg-teal-700 rounded-lg">
+        <Link to={`/exercise/${fetchedExercise.id}`}>Show More</Link>
+      </button>
+
       {/* STEPS */}
-      <div className="w-full flex flex-col gap-4">
+      {/* <div className="w-full flex flex-col gap-4">
         <div className="flex p-4 items-center justify-between border-b-2">
           <p className="uppercase">Steps</p>
           <button
@@ -33,10 +38,10 @@ const ExerciseInfo = ({ fetchedExercise }: FetchedProp) => {
             ))}
           </ul>
         ) : null}
-      </div>
+      </div> */}
 
       {/* VIDEO */}
-      <div className="w-full flex flex-col gap-4">
+      {/* <div className="w-full flex flex-col gap-4">
         <div className="flex p-4 items-center justify-between border-b-2">
           <p className="uppercase">Steps</p>
           <button
@@ -49,7 +54,7 @@ const ExerciseInfo = ({ fetchedExercise }: FetchedProp) => {
         {fetchedExercise.videoURL && showVideo ? (
           <video src={fetchedExercise.videoURL[0]} controls />
         ) : null}
-      </div>
+      </div> */}
     </Card>
   );
 };

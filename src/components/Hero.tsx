@@ -2,7 +2,7 @@ import Button from "../utils/Button";
 
 const Hero = () => {
   return (
-    <main className="flex-1 flex flex-col items-start justify-center gap-4 p-32  xl:px-80 bg-[url('./assets/hero.jpg')] bg-cover bg-no-repeat bg-center">
+    <main className="flex-1 flex flex-col items-start justify-center gap-4 p-32  xl:px-80">
       <div className="flex flex-col gap-2">
         <h2 className="text-7xl xl:text-8xl uppercase font-bold text-teal-500">
           Build

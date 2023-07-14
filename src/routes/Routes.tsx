@@ -3,6 +3,7 @@ import App from "../App";
 import Hero from "../components/Hero";
 import Program from "../components/Program";
 import Error from "./Error";
+import Exercise from "../components/Exercise";
 
 const router = createBrowserRouter([
   {
@@ -18,11 +19,11 @@ const router = createBrowserRouter([
         path: "/program",
         element: <Program />,
       },
+      {
+        path: "/exercise/:id",
+        element: <Exercise />,
+      },
     ],
-  },
-  {
-    path: "/program",
-    element: <Program />,
   },
 ]);
 

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ProgramContext } from "./Program";
+import { ProgramContext } from "../App";
 import { useForm } from "react-hook-form";
 import { Exercise } from "../types/types";
 
@@ -23,10 +23,10 @@ const ProgramMenu = () => {
   }
 
   return (
-    <aside className="flex flex-col items-center justify-start gap-8 p-16 bg-slate-500">
-      <h2 className="text-2xl">Choose your options</h2>
+    <aside className="flex flex-col items-center justify-start gap-4 p-8 bg-teal-500 text-slate-900">
+      <h2 className="text-2xl">Choose your program</h2>
       <form
-        className="w-full lg:w-1/2 flex flex-col gap-4 text-slate-100"
+        className="w-full lg:w-1/2 flex flex-col gap-4 text-slate-900"
         onSubmit={handleSubmit(onSubmitForm)}
       >
         <div className={fieldStyle}>
@@ -62,8 +62,8 @@ const ProgramMenu = () => {
             ))}
           </select>
         </div>
-        <button className="inline-block px-4 py-2 bg-teal-500 rounded-lg hover:bg-teal-700 text-white">
-          Send
+        <button className="inline-block px-4 py-2 bg-slate-100 rounded-lg hover:bg-slate-300 text-slate-900 self-center">
+          Send Info
         </button>
       </form>
     </aside>

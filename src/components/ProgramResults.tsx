@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ProgramContext } from "./Program";
+import { ProgramContext } from "../App";
 import ExerciseInfo from "./ExerciseInfo";
 
 const ProgramResults = () => {
@@ -7,7 +7,7 @@ const ProgramResults = () => {
 
   if (!isExercisesFetched) {
     return (
-      <section className="flex flex-col items-center justify-start gap-8 p-16 bg-teal-100">
+      <section className="flex flex-col items-center justify-start gap-8 p-16 bg-slate-300">
         <h2>Please wait...</h2>
       </section>
     );
@@ -16,7 +16,7 @@ const ProgramResults = () => {
   console.log(exercisesData);
 
   return (
-    <section className="p-8 grid grid-cols-1 lg:grid-cols-2 gap-8 bg-teal-500">
+    <section className="p-8 grid grid-cols-1 lg:grid-cols-2 gap-8 bg-slate-300">
       {exercisesData.map((e) => (
         <ExerciseInfo fetchedExercise={e} key={e.id} />
       ))}
