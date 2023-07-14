@@ -16,17 +16,17 @@ const ProgramMenu = () => {
 
   if (!isAttributesFetched) {
     return (
-      <aside className="flex flex-col items-center justify-start gap-8 p-16 bg-teal-100">
+      <aside className="flex-1 flex flex-col items-center justify-start gap-8 p-16 bg-teal-100">
         <h2>Please wait...</h2>
       </aside>
     );
   }
 
   return (
-    <aside className="flex flex-col items-center justify-start gap-4 p-8 bg-teal-500 text-slate-900">
+    <aside className="flex-1 flex flex-col items-center justify-start gap-4 p-8 bg-teal-500 text-slate-900">
       <h2 className="text-2xl">Choose your program</h2>
       <form
-        className="w-full lg:w-1/2 flex flex-col gap-4 text-slate-900"
+        className="w-2/3 lg:w-1/2 flex flex-col gap-4 text-slate-900"
         onSubmit={handleSubmit(onSubmitForm)}
       >
         <div className={fieldStyle}>

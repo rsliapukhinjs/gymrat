@@ -21,7 +21,7 @@ export type FetchedExercise = {
   target: {
     Primary: string[];
   };
-  videoURL?: string[] | undefined;
+  videoURL?: string[];
   youtubeURL?: string;
 };
 
@@ -40,9 +40,9 @@ export type Context = {
 };
 
 export const initialExercise = {
-  categories: "Barbell",
-  difficulties: "Beginner",
-  muscles: "Biceps",
+  categories: "",
+  difficulties: "",
+  muscles: "",
 };
 
 export const initialAction = {

@@ -70,7 +70,7 @@ const App = () => {
         isExercisesFetched,
       }}
     >
-      <div className="flex flex-col min-h-screen text-slate-50 bg-[url('./assets/hero.jpg')] bg-cover bg-no-repeat bg-center">
+      <div className="flex flex-col min-h-screen text-slate-50">
         <Header />
         <Outlet />
         <Footer />
