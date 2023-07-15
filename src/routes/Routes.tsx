@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Program from "../components/Program";
 import Error from "./Error";
 import Exercise from "../components/Exercise";
+import About from "../components/About";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/exercise/:id",
         element: <Exercise />,
+      },
+      {
+        path: "/about",
+        element: <About />,
       },
     ],
   },

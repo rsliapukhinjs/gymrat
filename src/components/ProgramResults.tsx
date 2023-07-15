@@ -16,16 +16,23 @@ const ProgramResults = () => {
   if (exercisesData.length < 1) {
     return (
       <div className="p-16 flex items-center justify-center  bg-slate-300 text-slate-900">
-        <h2 className="text-2xl">Sorry, no results...</h2>
+        <h2 className="text-2xl">Sorry, no matching results. Try again</h2>
       </div>
     );
   }
 
+  // Remove duplicates form API
+  const uniqueExercisedData = [
+    ...new Map(
+      exercisesData.map((item) => [item["exercise_name"], item])
+    ).values(),
+  ];
+
   return (
     <section className="p-8 flex flex-col gap-8 bg-slate-300">
       {exercisesData.length < 900 ? (
-        <div className="flex flex-col gap-4">
-          {exercisesData.map((e) => (
+        <div className="flex flex-col items-center gap-4">
+          {uniqueExercisedData.map((e) => (
             <ExerciseInfo fetchedExercise={e} key={e.id} />
           ))}
         </div>

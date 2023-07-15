@@ -9,8 +9,10 @@ const Hero = () => {
         backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(20, 184, 166, 0.1)), url(${HeroBg})`,
       }}
     >
-      <div className="flex flex-col gap-2 text-teal-500">
-        <h2 className="text-7xl xl:text-8xl uppercase font-bold">Build</h2>
+      <div className="flex flex-col gap-2">
+        <h2 className="text-7xl xl:text-8xl uppercase font-bold text-teal-500">
+          Build
+        </h2>
         <h2 className="text-7xl xl:text-8xl uppercase font-bold">yourself</h2>
       </div>
       <p className="text-lg xl:text-2xl tracking-wider">
