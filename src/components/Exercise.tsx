@@ -17,11 +17,19 @@ const Exercise = () => {
     );
   }
 
+  console.log();
+
   return (
     <div className="flex-1 p-8 flex flex-col items-center gap-8  bg-slate-700">
-      <h2 className="text-3xl uppercase">{currentExercise?.exercise_name}</h2>
-      <div className="flex flex-col gap-4">
-        <ul className="p-8 flex flex-col items-start justify-center gap-8 bg-teal-700">
+      <div className="w-full lg:w-3/4 flex items-center justify-between">
+        <Button text="Go Back" link="/program" />
+        <h2 className="text-3xl uppercase">{currentExercise?.exercise_name}</h2>
+      </div>
+      <div className="flex flex-col gap-4 items-center">
+        <div className="w-full lg:w-3/4">
+          <video src={currentExercise.videoURL[0]} controls></video>
+        </div>
+        <ul className="w-full lg:w-3/4 p-8 flex flex-col items-start justify-center gap-8 bg-teal-700">
           {currentExercise.steps?.map((s) => (
             <li className="flex items-center gap-4" key={s}>
               <span className="material-symbols-outlined">check_box</span>
@@ -29,11 +37,7 @@ const Exercise = () => {
             </li>
           ))}
         </ul>
-        <div className="w-full">
-          <video src={currentExercise.videoURL[0]} controls></video>
-        </div>
       </div>
-      <Button text="Go Back" link="/program" />
     </div>
   );
 };
