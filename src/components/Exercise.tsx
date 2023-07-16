@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useContext, useState } from "react";
 import { ProgramContext } from "../App";
-import { FaCheckCircle } from "react-icons/fa";
 import Button from "../utils/Button";
 
 const Exercise = () => {
