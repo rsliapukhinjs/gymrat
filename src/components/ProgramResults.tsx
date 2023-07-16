@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ProgramContext } from "../App";
+import { FaArrowCircleUp } from "react-icons/fa";
 import ExerciseInfo from "./ExerciseInfo";
 
 const ProgramResults = () => {
@@ -37,9 +38,9 @@ const ProgramResults = () => {
           ))}
         </div>
       ) : (
-        <div className="p-8 flex items-center justify-center text-slate-900">
+        <div className="p-8 flex gap-4 items-center justify-center text-slate-900">
           <h2 className="text-2xl">Start your journey above </h2>
-          <span className="material-symbols-outlined">arrow_upward</span>
+          <FaArrowCircleUp />
         </div>
       )}
     </section>
