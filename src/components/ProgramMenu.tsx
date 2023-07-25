@@ -12,7 +12,7 @@ const ProgramMenu = () => {
     dispatch({ type: "set", exercise: formData });
   };
 
-  const fieldStyle = "flex flex-col mb-2";
+  const fieldStyle = "flex flex-col mb-2 gap-4";
 
   if (!isAttributesFetched) {
     return (
@@ -24,13 +24,12 @@ const ProgramMenu = () => {
 
   return (
     <aside className="flex-1 flex flex-col items-center justify-start gap-4 p-8 bg-teal-500 text-slate-900">
-      <h2 className="text-2xl">Choose your program</h2>
       <form
-        className="w-2/3 lg:w-1/2 flex flex-col gap-4 text-slate-900"
+        className="w-2/3 flex flex-col gap-4 text-slate-900"
         onSubmit={handleSubmit(onSubmitForm)}
       >
         <div className={fieldStyle}>
-          <label htmlFor="categories">Categories</label>
+          <label htmlFor="categories" className="text-xl text-center uppercase">Step 1. Equipment</label>
           <select id="categories" {...register("categories")}>
             <option value=""></option>
             {attributesData.categories.map((c) => (
@@ -41,7 +40,7 @@ const ProgramMenu = () => {
           </select>
         </div>
         <div className={fieldStyle}>
-          <label htmlFor="difficulties">Difficulties</label>
+          <label htmlFor="difficulties" className="text-xl text-center uppercase">Step 2. Your level</label>
           <select id="difficulties" {...register("difficulties")}>
             <option value=""></option>
             {attributesData.difficulties.map((d) => (
@@ -52,7 +51,7 @@ const ProgramMenu = () => {
           </select>
         </div>
         <div className={fieldStyle}>
-          <label htmlFor="muscles">Muscles</label>
+          <label htmlFor="muscles" className="text-xl text-center uppercase">Step 3. Muscle group</label>
           <select id="muscles" {...register("muscles")}>
             <option value=""></option>
             {attributesData.muscles.map((m) => (

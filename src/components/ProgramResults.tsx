@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ProgramContext } from "../App";
-import { FaArrowCircleUp } from "react-icons/fa";
+import { FaHourglassStart } from "react-icons/fa";
 import ExerciseInfo from "./ExerciseInfo";
 
 const ProgramResults = () => {
@@ -30,17 +30,17 @@ const ProgramResults = () => {
   ];
 
   return (
-    <section className="p-8 flex flex-col gap-8 bg-slate-300">
+    <section className="p-8 flex flex-col items-center justify-center gap-8 bg-slate-300">
       {exercisesData.length < 900 ? (
-        <div className="flex flex-col items-center gap-4">
+        <div className="grid grid-cols-2 gap-8">
           {uniqueExercisedData.map((e) => (
             <ExerciseInfo fetchedExercise={e} key={e.id} />
           ))}
         </div>
       ) : (
         <div className="p-8 flex gap-4 items-center justify-center text-slate-900">
-          <h2 className="text-2xl">Start your journey above </h2>
-          <FaArrowCircleUp />
+          <h2 className="text-3xl">Start your journey now</h2>
+          <FaHourglassStart className="text-3xl"/>
         </div>
       )}
     </section>
