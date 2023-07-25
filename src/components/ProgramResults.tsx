@@ -30,9 +30,9 @@ const ProgramResults = () => {
   ];
 
   return (
-    <section className="p-8 flex flex-col items-center justify-center gap-8 bg-slate-300">
+    <section className="p-16 flex flex-col items-center justify-center gap-8 bg-slate-300">
       {exercisesData.length < 900 ? (
-        <div className="grid grid-cols-2 gap-8">
+        <div className="w-full flex flex-col lg:grid lg:grid-cols-2 gap-8">
           {uniqueExercisedData.map((e) => (
             <ExerciseInfo fetchedExercise={e} key={e.id} />
           ))}
